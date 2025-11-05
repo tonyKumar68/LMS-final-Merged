@@ -59,7 +59,7 @@ function App() {
 const isCoursePage =
   location.pathname.startsWith("/viewcourse") ||
   location.pathname.startsWith("/viewlecture");
-
+  
   return (
     <>
       <ToastContainer />
