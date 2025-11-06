@@ -89,11 +89,11 @@ function Home() {
 
       {/* LMS sections below */}
       <Logos />
-      <ExploreCourses />
+      <div id="explore-courses"><ExploreCourses /></div>
       <Cardspage />
-      <About />
+      <div id="about-us"><About /></div>
       <ReviewPage />
-      <Footer />
+      <div id="contact-us"><Footer /></div>
     </div>
   );
 }
