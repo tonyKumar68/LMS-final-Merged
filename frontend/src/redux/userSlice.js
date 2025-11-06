@@ -4,12 +4,14 @@ const userSlice=createSlice({
     name:"user",
     initialState:{
         userData:null,
+        isFetchingUser: true, // ✅ track fetch status
         wishlist: [],
         notifications: []
     },//setUserData("ankush")<={payload}
     reducers:{
         setUserData:(state,action)=>{
         state.userData=action.payload
+        state.isFetchingUser = false; // ✅ fetch done
         },
         setWishlist: (state, action) => {
             state.wishlist = action.payload;
