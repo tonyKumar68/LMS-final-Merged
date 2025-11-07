@@ -46,7 +46,7 @@ const useScreenshotPrevention = (lectureId = null) => {
               // ignore logout errors
             }
             // Redirect to login page to clear frontend state
-            window.location.replace('/login');
+            window.location.replace('/');
           }, 1400);
         } catch (err) {
           // reporting failed; still log error but don't force logout
@@ -69,7 +69,7 @@ const useScreenshotPrevention = (lectureId = null) => {
               // ignore logout errors
             }
             // Redirect to login page to clear frontend state
-            window.location.replace('/login');
+            window.location.replace('/');
           }, 1400);
         } catch (err) {
           // reporting failed; still log error but don't force logout
@@ -101,20 +101,20 @@ const useScreenshotPrevention = (lectureId = null) => {
         showWarning('Saving is disabled.');
       }
       // Prevent Ctrl+U (View Source)
-      if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-        showWarning('Viewing source is disabled.');
-      }
+      // if (e.ctrlKey && e.key === 'u') {
+      //   e.preventDefault();
+      //   showWarning('Viewing source is disabled.');
+      // }
       // Prevent Ctrl+Shift+I (Inspect Element)
-      if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-        showWarning('Inspecting elements is disabled.');
-      }
+      // if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+      //   e.preventDefault();
+      //   showWarning('Inspecting elements is disabled.');
+      // }
       // Prevent F12 (Developer Tools)
-      if (e.key === 'F12') {
-        e.preventDefault();
-        showWarning('Developer tools are disabled.');
-      }
+      // if (e.key === 'F12') {
+      //   e.preventDefault();
+      //   showWarning('Developer tools are disabled.');
+      // }
       // Prevent Alt+PrintScreen
       if (e.altKey && e.key === 'PrintScreen') {
         e.preventDefault();
